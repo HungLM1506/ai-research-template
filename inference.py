@@ -25,7 +25,8 @@ def main(
         "trainer": config.get("trainer"),
     }
     
-    pl.seed_everything(train_config_dict.get("setting").get("random_seed"))
+    setting = train_config_dict.get("setting") or {}
+    pl.seed_everything(setting.get("random_seed"))
 
     data_module = DataModule(config=train_config_dict)
     data_module.prepare_data()
