@@ -13,7 +13,7 @@ from train_module import TrainModule
 from utils import load_config
 
 
-def main(config_dir: str, **kargs: Dict[str, Any]) -> None:
+def main(config_dir: str, **kargs: dict[str, Any]) -> None:
     general_config_path = os.path.join(config_dir, "general_config.yaml")
     model_config_path = os.path.join(config_dir, "model_config.yaml")
     train_config_path = os.path.join(config_dir, "train_config.yaml")
